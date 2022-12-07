@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters Count</title>
+    <style>
+        #main{
+            height:"550px";
+            width:"600px";
+            background-color:"red";
+        }
+        body
+        {
+            margin:"800px";
+        }
+    </style>
+</head>
+<body >
+    <center>
+    <h1>Characters Counter</h1>
+    <div id="main">
+        
+            
+            <label>Enter the Text :</label>
+            <input type="text" id ="t1" placeholder="Enter the texts "><br>
+            <label>Number of Characters :</label>
+            <input type="text" id ="t2" placeholder="Number of Characters "><br>
+
+
+            <input type="button" value="Submit" id="b1">   
+            <input type="button" value="Reset" id="b2">   
+
+
+
+
+
+        </form>
+    </div>
+</center>
+<script>
+    const txt1=document.getElementById('t1');
+    const txt2=document.getElementById('t2');
+    const btn1=document.getElementById('b1');
+    const btn2=document.getElementById('b2');
+    function submit()
+    {
+        var s=txt1.value;
+       txt2.value= s.length;
+
+    }
+    function reset()
+    {
+        txt1.value= '';
+       txt2.value= '';
+
+    }
+    btn1.addEventListener('click',submit);
+    btn2.addEventListener('click',reset);
+</script>
+</body>
+</html>
